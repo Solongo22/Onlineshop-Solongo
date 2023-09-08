@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+header .shop-cart-button{
+    float:right;
+    cursor:pointer;
+    transition: color, transform 400ms;
+}
+header .shop-cart-button:hover, header .shop-cart-button.active{
+color: red;
+transform: scale(1.5);
+} 
+header{
+    position: relative;
+}
+header .shop-cart{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 450px;
+
+    z-index: 100;
+    height: fit-content;
+    background-color: white;
+   box-shadow: 1px 4px 20px 9px rgba(0,0,0,0.75);
+   padding: 20px;
+   padding-bottom: 0;
+}
+
+
+
+header .shop-cart .sags h2 {
+   margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+header .shop-cart .item{
+    width: 100%;
+    float:left;
+    margin-bottom: 20px;
+
+
+}
+
+.categories div{
+    display: inline-block;
+    background-color: #f2f2f2;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    margin-right: 25px;
+    cursor: pointer;
+    border:  3px solid transparent;
+    transition: 400ms;
+
+}
+.categories div:hover{
+  transform: scale(1.2);  
+  border-color: silver;
+}
+
+
+header .shop-cart .item img{
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-right: 20px;
+    object-fit: cover;
+
+}
+
+header .shop-cart .item h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header .shop-cart .item b{
+    color: #797979;
+    font-weight: 600;
+    font-size: 20px;
+
+}
+header .shop-cart .item .trash {
+    color: red;
+float: right;
+position: relative;
+top: -28px;
+cursor: pointer;
+transition: transfrom 300ms;
+}
+header .shop-cart .item .trash:hover{
+    transform: scale(1.5);
+}
+ header .shop-cart .summa{
+float:left;
+width: 100%;
+font-weight: 600;
+font-size: 20px;
+margin-bottom: 20px;
+
+ }
+
+ .full-item{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.749);
+    /* z-index: 999;
+    overflow: auto; */
+
+ }
+ .full-item> div{
+    width: 500px;
+    position: relative;
+    margin:15% auto;
+    padding: 40px 30px;
+    background-color: white;
+    border-radius: 20px;
+
+    
+ }
+
+ 
+
+main{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+main .item{
+width: 30%;
+margin-bottom: 50px;
+background-color: #dbd8d821;
+overflow: hidden;
+position: relative;
+padding-bottom: 20px;
+
+}
+main .item img,
+.full-item img{
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+main .item img:hover, 
+.full-item img:hover{
+    transform: scale(1.05);
+}
+main h2, p, b, .full-item h2, p, b{
+margin: 10px 20px;
+color: #333;
+
+}
+main b, .full-item b{
+    color: #5fa36a;
+    font-size: 20px;
+}
+main b:hover, .full-item b:hover {
+    color: red;
+    font-size: 25px;
+}
+main .add-to-cart, .full-item .add-to-cart{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background-color: #ca5252;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    border-radius: 50%;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 200ms;
+
+}
+main .add-to-cart:hover, .full-item .add-to-cart:hover{
+    transform: scale(1.5) translateY(-5px);
+   ;
+}
